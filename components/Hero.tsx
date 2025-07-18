@@ -4,7 +4,6 @@ import { cn } from '@/utils/cn'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
-import { SparklesCore } from './ui/Sparkle'
 
 const Hero = () => {
   return (
