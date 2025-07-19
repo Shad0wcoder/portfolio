@@ -49,7 +49,7 @@ const Hero = () => {
           </p>
 
           <a href="#about">
-            <MagicButton title='Show my work' icon={<FaLocationArrow />} position='right' />
+            <MagicButton title='Show my work' icon={<FaLocationArrow />} position='right' otherClasses="!bg-[#161A31] cursor-pointer" />
           </a>
         </div>
       </div>

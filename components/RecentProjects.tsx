@@ -24,7 +24,7 @@ const RecentProjects = () => {
                 <div key={id} className='sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]'>
                     <PinContainer title={link} href={link}>
                         <div className='relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] lg:h-[30vh] mb-10'>
-                            <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]'>
+                            <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#111424]'>
                                 <img src="/bg.png" alt='bg-img'/>
                             </div>
                             <img src={img} alt={title} className='z-10 absolute bottom-0' />
@@ -40,8 +40,8 @@ const RecentProjects = () => {
                         <div className='flex items-center justify-between mt-7 mb-3'>
                             <div className='flex items-center'>
                                 {iconLists.map((icon, index) => (
-                                    <div key={icon} className='border border-white/[0.2] rounded-full bg-gradient-to-t from-black via-slate-500 to-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center' style={{transform: `translateX(-${5 * index * 2}px)`}}>
-                                        <img src={icon} alt={icon} className='p-2' />
+                                    <div key={icon} className='border border-white/[0.2] rounded-full bg-gradient-to-t from-black/10 via-slate-700 to-black/[0.6] lg:w-10 lg:h-10 w-8 h-8 flex justify-center' style={{transform: `translateX(-${5 * index * 2}px)`}}>
+                                        <img src={icon} className='p-1.5' />
                                     </div>
                                 ))}
                             </div>

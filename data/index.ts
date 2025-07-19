@@ -1,7 +1,6 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -10,7 +9,7 @@ export const gridItems = [
     id: 1,
     title: "My tech stack",
     description: "I constantly try to improve",
-    className: "lg:col-span-6 md:col-span-6 md:row-span-4 lg:min-h-[40vh]",
+    className: "lg:col-span-6 md:col-span-6 md:row-span-2 lg:min-h-[40vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-start",
     img: "/bg.png",
@@ -30,7 +29,7 @@ export const gridItems = [
     id: 6,
     title: "Do you want to start a project together?",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
     img: "",

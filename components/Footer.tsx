@@ -17,6 +17,7 @@ const Footer = () => {
                     title="Let's get in touch"
                     icon={<FaLocationArrow />}
                     position='right'
+                    otherClasses='!bg-[#161A31] cursor-pointer'
                 />
             </a>
         </div>

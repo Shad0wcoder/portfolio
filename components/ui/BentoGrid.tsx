@@ -26,30 +26,54 @@ export const BentoGrid = ({
   );
 };
 
-const icon = [
-  { src: "/icons/html5.svg", name: "HTML5" },
-  { src: "/icons/css3.svg", name: "CSS3" },
-  { src: "/icons/javascript.svg", name: "JavaScript" },
-  { src: "/icons/typescript.svg", name: "TypeScript" },
-  { src: "/icons/react.svg", name: "React" },
-  { src: "/icons/nextjs.svg", name: "NextJS" },
-  { src: "/icons/nodejs.svg", name: "NodeJS" },
-  { src: "/icons/Express.svg", name: "ExpressJS" },
-  { src: "/icons/mongodb.svg", name: "MongoDB" },
-  { src: "/icons/tailwind.svg", name: "Tailwind CSS" },
-  { src: "/icons/bootstrap.svg", name: "Bootstrap" },
-  { src: "/icons/git.svg", name: "Git" },
-  { src: "/icons/github.svg", name: "GitHub" },
-  { src: "/icons/php.svg", name: "PHP" },
-  { src: "/icons/figma.png", name: "Figma" },
-  { src: "/icons/vscode.svg", name: "VS Code" },
-  { src: "/icons/mysql.svg", name: "MySQL" },
-  { src: "/icons/android-studio.svg", name: "Android Studio" },
-  { src: "/icons/java.svg", name: "Java" },
-  { src: "/icons/django.svg", name: "Django" },
-  { src: "/icons/python.svg", name: "Python" },
-
+const iconCategories = [
+  {
+    title: "Frontend",
+    icons: [
+      { src: "/icons/html5.svg", name: "HTML5" },
+      { src: "/icons/css3.svg", name: "CSS3" },
+      { src: "/icons/javascript.svg", name: "JavaScript" },
+      { src: "/icons/typescript.svg", name: "TypeScript" },
+      { src: "/icons/react.svg", name: "React" },
+      { src: "/icons/nextjs.svg", name: "NextJS" },
+      { src: "/icons/tailwind.svg", name: "Tailwind CSS" },
+      { src: "/icons/bootstrap.svg", name: "Bootstrap" },
+    ],
+  },
+  {
+    title: "Backend",
+    icons: [
+      { src: "/icons/nodejs.svg", name: "NodeJS" },
+      { src: "/icons/Express.svg", name: "ExpressJS" },
+      { src: "/icons/django.svg", name: "Django" },
+      { src: "/icons/php.svg", name: "PHP" },
+    ],
+  },
+  {
+    title: "Programming Languages",
+    icons: [
+      { src: "/icons/java.svg", name: "Java" },
+      { src: "/icons/python.svg", name: "Python" },
+    ],
+  },
+  {
+    title: "Databases",
+    icons: [
+      { src: "/icons/mongodb.svg", name: "MongoDB" },
+      { src: "/icons/mysql.svg", name: "MySQL" },
+    ],
+  },
+  {
+    title: "Tools & Platforms",
+    icons: [
+      { src: "/icons/git.svg", name: "Git" },
+      { src: "/icons/github.svg", name: "GitHub" },
+      { src: "/icons/vscode.svg", name: "VS Code" },
+      { src: "/icons/figma.png", name: "Figma" },
+    ],
+  },
 ];
+
 
 export const BentoGridItem = ({
   className,
@@ -74,7 +98,7 @@ export const BentoGridItem = ({
 
   const [copied, setCopied] = useState(false)
 
-    const defaultOptions = {
+  const defaultOptions = {
     loop: copied,
     autoplay: copied,
     animationData: animationData,
@@ -84,7 +108,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const email = "rohit123@gmail.com"
+    const email = "rohitvishwa9810@gmail.com"
     navigator.clipboard.writeText(email);
     setCopied(true);
   }
@@ -134,23 +158,28 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {id === 1 && Array.isArray(icon) && (
-            <div className="flex flex-wrap md:gap-4 gap-3 items-start justify-center md:p-5 p-2 mt-5">
-              {icon.map((icons, index) => (
-                <div key={index} className="group flex flex-col items-center justify-center">
-                  {/* Icon */}
-                  <div className="flex items-center justify-center rounded-2xl bg-gradient-to-t from-blue-700 via-blue-400 to-blue-900 lg:w-16 lg:h-16 w-10 h-10 hover:scale-120 transition-transform duration-200">
-                    <img src={icons.src} alt={icons.name} className="lg:w-12 lg:h-12 md:hover:w-13 md:hover:h-13 p-1 w-10 h-10" />
-                  </div>
-                  {/* Name under icon, appears on hover with slide-up */}
-                  <span className="hidden md:block text-sm font-extrabold text-slate-200 mt-2 opacity-0 translate-y-0 group-hover:opacity-100 group-hover:translate-y-2 
-                        transition-all duration-400">
-                    {icons.name}
-                  </span>
+          {id === 1 &&
+            Array.isArray(iconCategories) &&
+            iconCategories.map((category, idx) => (
+              <div key={idx} className="w-full mb-2 mt-2 border-t border-white/[0.2]">
+                <h2 className="md:text-xl text-lg font-bold text-white mb-1">{category.title}</h2>
+
+                <div className="flex flex-wrap md:gap-7 gap-3 items-start justify-start md:p-1 p-2">
+                  {category.icons.map((icons, index) => (
+                    <div key={index} className="group flex flex-col items-center justify-center">
+                      <div className="flex items-center justify-center md:rounded-2xl rounded-xl bg-gradient-to-t from-blue-900 via-blue-600 to-blue-900 lg:w-16 lg:h-16 w-10 h-10 hover:scale-110 transition-transform duration-200 md:border md:border-white/[0.3] hover:border-white/[0.5]">
+                        <img src={icons.src} alt={icons.name} className="lg:w-13.5 lg:h-13.5 p-1 w-10 h-10" />
+                      </div>
+
+                      <span className="hidden md:block text-wrap text-sm font-extrabold text-slate-200 mt-1 opacity-0 translate-y-0 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-400">
+                        {icons.name}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          )}
+              </div>
+            ))}
+
 
 
           {id === 6 && (
@@ -168,7 +197,7 @@ export const BentoGridItem = ({
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="!bg-[#161A31] cursor-pointer"
               />
             </div>
           )}
@@ -180,7 +209,7 @@ export const BentoGridItem = ({
                 icon={<IoCheckmarkDoneSharp />}
                 position="left"
                 handleClick={() => window.open("/Rohit_Vishwakarma_Resume.pdf", "_blank")}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="!bg-[#161A31] cursor-pointer"
               />
             </div>
           )}
