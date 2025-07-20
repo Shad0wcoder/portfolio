@@ -162,16 +162,16 @@ export const BentoGridItem = ({
             Array.isArray(iconCategories) &&
             iconCategories.map((category, idx) => (
               <div key={idx} className="w-full mb-2 mt-2 border-t border-white/[0.2]">
-                <h2 className="md:text-xl text-lg font-bold text-white mb-1">{category.title}</h2>
+                <h2 className="md:text-3xl sm:text-xl font-bold text-white mb-1">{category.title}</h2>
 
-                <div className="flex flex-wrap md:gap-7 gap-3 items-start justify-start md:p-1 p-2">
+                <div className="flex flex-wrap lg:gap-7 md:gap-8 gap-3 items-start justify-start md:p-1 p-2">
                   {category.icons.map((icons, index) => (
                     <div key={index} className="group flex flex-col items-center justify-center">
-                      <div className="flex items-center justify-center md:rounded-2xl rounded-xl bg-gradient-to-t from-blue-900 via-blue-600 to-blue-900 lg:w-16 lg:h-16 w-10 h-10 hover:scale-110 transition-transform duration-200 md:border md:border-white/[0.3] hover:border-white/[0.5]">
+                      <div className="flex items-center justify-center md:rounded-2xl rounded-xl bg-gradient-to-t from-slate-900 via-blue-500 to-white lg:w-16 lg:h-16 w-10 h-10 hover:scale-110 transition-transform duration-200 md:border md:border-white/[0.3] hover:border-white/[0.5]">
                         <img src={icons.src} alt={icons.name} className="lg:w-13.5 lg:h-13.5 p-1 w-10 h-10" />
                       </div>
 
-                      <span className="hidden md:block text-wrap text-sm font-extrabold text-slate-200 mt-1 opacity-0 translate-y-0 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-400">
+                      <span className="hidden md:block text-wrap text-sm font-bold text-slate-200 mt-1 opacity-0 translate-y-0 group-hover:opacity-100 group-hover:translate-y-2 transition-all duration-400">
                         {icons.name}
                       </span>
                     </div>
