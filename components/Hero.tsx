@@ -48,7 +48,7 @@ const Hero = () => {
             I am a Full Stack Developer with a passion for creating dynamic and responsive web applications. I specialize in building scalable and efficient solutions using the latest technologies.
           </p>
 
-          <a href="#about">
+          <a href="#projects">
             <MagicButton title='Show my work' icon={<FaLocationArrow />} position='right' otherClasses="!bg-[#161A31] cursor-pointer" />
           </a>
         </div>
