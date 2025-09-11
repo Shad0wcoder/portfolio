@@ -208,7 +208,7 @@ export const BentoGridItem = ({
                 title="Download Resume"
                 icon={<IoCheckmarkDoneSharp />}
                 position="left"
-                handleClick={() => window.open("/Rohit_Vishwakarma_Resume.pdf", "_blank")}
+                handleClick={() => window.open("/Rohit_Vishwakarma_CV.pdf", "_blank")}
                 otherClasses="!bg-[#161A31] cursor-pointer"
               />
             </div>
