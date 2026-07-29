@@ -66,6 +66,13 @@ export const workExperience = [
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
+  {
+    id: 2,
+    title: "Web Developer | Saf India Glass",
+    desc: "Developed and maintained a responsive corporate website with a focus on performance and user experience.\nImplemented new UI components, updated product and company content, and resolved front-end issues.\nOptimized website performance, ensured cross-browser compatibility, and applied SEO best practices to improve online visibility.",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+  },
 ];
 
 export const socialMedia = [
